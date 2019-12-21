@@ -1,0 +1,48 @@
+
+Showing logs for build [32mtagscloud-environment-bootboot-qpvtg-4[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-jhgq5[0m
+{"level":"warn","ts":1576923187.3724267,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1576923187.3729587,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mtagscloud-environment-bootboot-qpvtg-4[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-jbqld[0m
+{"level":"warn","ts":1576923187.6370242,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1576923187.638405,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mtagscloud-environment-bootboot-qpvtg-4[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mtagscloud-environment-bootboot-qpvtg-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-tagscloud-environment-bootboot-drqtg[0m
+{"level":"warn","ts":1576923192.7026722,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1576923194.6202016,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/tagscloud/environment-bootboot-staging.git @ v0.0.3 in path /workspace/source"}
+
+Showing logs for build [32mtagscloud-environment-bootboot-qpvtg-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:9da89e483dd2fd5d242511e53818d210ea3b925e
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mtagscloud-environment-bootboot-qpvtg-4[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mtagscloud-environment-bootboot-qpvtg-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 4
+Ignoring templates/.gitignore
+Ignoring templates/wildcardcert-secret.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: strimzi.io http://strimzi.io/charts/
+Successfully added Helm repository strimzi.io.
+error: failed to build the dependencies of chart '/tmp/**-helm-apply-652587946/env': failed to run 'helm dependency build' command in directory '/tmp/**-helm-apply-652587946/env', output: 'Hang tight while we grab the latest from your chart repositories...
+...Unable to get an update from the "local" chart repository (http://127.0.0.1:8879/charts):
+	Get http://127.0.0.1:8879/charts/index.yaml: dial tcp 127.0.0.1:8879: connect: connection refused
+...Successfully got an update from the "jenkins-x-chartmuseum" chart repository
+...Successfully got an update from the "strimzi.io" chart repository
+...Successfully got an update from the "stable" chart repository
+...Successfully got an update from the "chartmuseum.jenkins-x.io" chart repository
+...Successfully got an update from the "storage.googleapis.com" chart repository
+Update Complete.
+Error: strimzi-operator chart not found in repo http://strimzi.io/charts/'
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-helm-apply'. The execution of the pipeline has stopped.[0m

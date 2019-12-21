@@ -7,8 +7,8 @@ dependencies:
   version: 2.3.114
   repository: http://chartmuseum.jenkins-x.io
   alias: cleanup
-- name: strimzi-operator
+- name: strimzi/strimzi-kafka-operator
   version: 0.15.0
   repository: http://strimzi.io/charts/
-  aliaz: strimzi-operator
+  alias: strimzi-operator
 

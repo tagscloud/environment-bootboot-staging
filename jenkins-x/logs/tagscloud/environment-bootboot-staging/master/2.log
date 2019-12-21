@@ -1,0 +1,39 @@
+
+Showing logs for build [32mtagscloud-environment-bootboot-dpfzk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-sbfzp[0m
+{"level":"warn","ts":1576910359.3621142,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1576910359.3625612,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mtagscloud-environment-bootboot-dpfzk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-mrkh6[0m
+{"level":"warn","ts":1576910360.7263982,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1576910360.7274024,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mtagscloud-environment-bootboot-dpfzk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mtagscloud-environment-bootboot-dpfzk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-tagscloud-environment-bootboot-pkmzf[0m
+{"level":"warn","ts":1576910403.7745109,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1576910405.6904168,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/tagscloud/environment-bootboot-staging.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mtagscloud-environment-bootboot-dpfzk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:58e3b34b8ddae7c516f64ac18e8bc708ffb5a16b
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mtagscloud-environment-bootboot-dpfzk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mtagscloud-environment-bootboot-dpfzk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 2
+Namespace **-staging created 
+Ignoring templates/.gitignore
+Ignoring templates/wildcardcert-secret.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: github.com https://github.com/strimzi/strimzi-kafka-operator/tree/master/helm-charts/strimzi-kafka-operator
+error: failed to add chart repositories: failed to add Helm repository 'https://github.com/strimzi/strimzi-kafka-operator/tree/master/helm-charts/strimzi-kafka-operator': failed to add the repository 'github.com' with URL 'https://github.com/strimzi/strimzi-kafka-operator/tree/master/helm-charts/strimzi-kafka-operator': failed to run 'helm repo add github.com https://github.com/strimzi/strimzi-kafka-operator/tree/master/helm-charts/strimzi-kafka-operator' command in directory '/tmp/**-helm-apply-933977867/env', output: 'Error: Looks like "https://github.com/strimzi/strimzi-kafka-operator/tree/master/helm-charts/strimzi-kafka-operator" is not a valid chart repository or cannot be reached: Failed to fetch https://github.com/strimzi/strimzi-kafka-operator/tree/master/helm-charts/strimzi-kafka-operator/index.yaml : 404 Not Found'
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-helm-apply'. The execution of the pipeline has stopped.[0m

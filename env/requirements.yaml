@@ -9,6 +9,6 @@ dependencies:
   alias: cleanup
 - name: strimzi-operator
   version: 0.1.0
-  repository: https://github.com/strimzi/strimzi-kafka-operator/tree/master/helm-charts/strimzi-kafka-operator
+  repository: https://raw.githubusercontent.com/strimzi/strimzi-kafka-operator/master/helm-charts/strimzi-kafka-operator
   aliaz: strimzi-operator
 

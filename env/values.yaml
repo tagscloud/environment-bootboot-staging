@@ -1,4 +1,12 @@
 PipelineSecrets: {}
+elasticsearch-operator:
+  rbac:
+    enabled: true
+elasticsearch:
+  kibana:
+    enabled: true
+  cerebro:
+    enabled: true
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete

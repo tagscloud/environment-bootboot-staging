@@ -1,0 +1,40 @@
+
+Showing logs for build [32mtagscloud-environment-bootboot-hdgz5-10[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-bxt67[0m
+{"level":"warn","ts":1577014399.927537,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1577014399.9278264,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mtagscloud-environment-bootboot-hdgz5-10[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-tkpbm[0m
+{"level":"warn","ts":1577014400.8920956,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1577014400.8937247,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mtagscloud-environment-bootboot-hdgz5-10[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mtagscloud-environment-bootboot-hdgz5-10[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-tagscloud-environment-bootboot-blf5x[0m
+{"level":"warn","ts":1577014405.9928517,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1577014407.9221241,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/tagscloud/environment-bootboot-staging.git @ v0.0.9 in path /workspace/source"}
+
+Showing logs for build [32mtagscloud-environment-bootboot-hdgz5-10[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:1aeb1010fee3765ddaa603bd1fe52213772f2f74
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mtagscloud-environment-bootboot-hdgz5-10[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mtagscloud-environment-bootboot-hdgz5-10[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 10
+Ignoring templates/.gitignore
+Ignoring templates/wildcardcert-secret.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: strimzi.io http://strimzi.io/charts/
+Successfully added Helm repository strimzi.io.
+Adding missing Helm repo: raw.githubusercontent.com https://raw.githubusercontent.com/upmc-enterprises/elasticsearch-operator/master/charts/
+Successfully added Helm repository raw.githubusercontent.com.
+
+

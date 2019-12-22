@@ -1,0 +1,68 @@
+
+Showing logs for build [32mtagscloud-environment-bootboot-rllwv-9[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-nvtcs[0m
+{"level":"warn","ts":1577014174.5256226,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1577014174.5259361,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mtagscloud-environment-bootboot-rllwv-9[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-hzsb9[0m
+{"level":"warn","ts":1577014175.7663074,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1577014175.7683117,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mtagscloud-environment-bootboot-rllwv-9[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mtagscloud-environment-bootboot-rllwv-9[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-tagscloud-environment-bootboot-b8dn2[0m
+{"level":"warn","ts":1577014179.8274572,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1577014181.7535992,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/tagscloud/environment-bootboot-staging.git @ v0.0.8 in path /workspace/source"}
+
+Showing logs for build [32mtagscloud-environment-bootboot-rllwv-9[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d51e49a15ee8e932198d592246b5a04917dd7617
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mtagscloud-environment-bootboot-rllwv-9[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mtagscloud-environment-bootboot-rllwv-9[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 9
+Ignoring templates/.gitignore
+Ignoring templates/wildcardcert-secret.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: strimzi.io http://strimzi.io/charts/
+Successfully added Helm repository strimzi.io.
+Adding missing Helm repo: raw.githubusercontent.com https://raw.githubusercontent.com/upmc-enterprises/elasticsearch-operator/master/charts/
+Successfully added Helm repository raw.githubusercontent.com.
+error: upgrading helm chart '.': failed to run 'kubectl apply --recursive -f /tmp/helm-template-workdir-610963761/**/output/namespaces/**-staging -l jenkins.io/chart-release=** --namespace **-staging --wait --validate=false' command in directory '/tmp/**-helm-apply-077287135/env', output: 'role.rbac.authorization.k8s.io/cleanup configured
+rolebinding.rbac.authorization.k8s.io/cleanup configured
+serviceaccount/cleanup configured
+deployment.extensions/elasticsearch-operator created
+configmap/exposecontroller configured
+role.rbac.authorization.k8s.io/expose configured
+rolebinding.rbac.authorization.k8s.io/expose configured
+serviceaccount/expose configured
+serviceaccount/strimzi-cluster-operator configured
+clusterrole.rbac.authorization.k8s.io/strimzi-cluster-operator-namespaced configured
+rolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator configured
+clusterrole.rbac.authorization.k8s.io/strimzi-cluster-operator-global configured
+clusterrolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator configured
+clusterrole.rbac.authorization.k8s.io/strimzi-kafka-broker configured
+clusterrolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator-kafka-broker-delegation configured
+clusterrole.rbac.authorization.k8s.io/strimzi-entity-operator configured
+rolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator-entity-operator-delegation configured
+clusterrole.rbac.authorization.k8s.io/strimzi-topic-operator configured
+rolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator-topic-operator-delegation configured
+customresourcedefinition.apiextensions.k8s.io/kafkas.kafka.strimzi.io configured
+customresourcedefinition.apiextensions.k8s.io/kafkaconnects.kafka.strimzi.io configured
+customresourcedefinition.apiextensions.k8s.io/kafkaconnects2is.kafka.strimzi.io configured
+customresourcedefinition.apiextensions.k8s.io/kafkatopics.kafka.strimzi.io configured
+customresourcedefinition.apiextensions.k8s.io/kafkausers.kafka.strimzi.io configured
+customresourcedefinition.apiextensions.k8s.io/kafkamirrormakers.kafka.strimzi.io configured
+customresourcedefinition.apiextensions.k8s.io/kafkabridges.kafka.strimzi.io configured
+deployment.apps/strimzi-cluster-operator configured
+error: unable to recognize "/tmp/helm-template-workdir-610963761/**/output/namespaces/**-staging/env/charts/elasticsearch/templates/part0-cluster.yaml": no matches for kind "ElasticsearchCluster" in version "enterprises.upmc.com/v1"'
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-helm-apply'. The execution of the pipeline has stopped.[0m

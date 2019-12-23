@@ -15,7 +15,3 @@ dependencies:
   version: 0.1.3
   repository: https://raw.githubusercontent.com/upmc-enterprises/elasticsearch-operator/master/charts/
   alias: elasticsearch-operator
-- name: elasticsearch
-  version: 0.1.5
-  repository: https://raw.githubusercontent.com/upmc-enterprises/elasticsearch-operator/master/charts/
-  alias: elasticsearch

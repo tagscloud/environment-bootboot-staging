@@ -1,0 +1,38 @@
+
+Showing logs for build [32mtagscloud-environment-bootboot-bfwhd-17[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-67b49[0m
+{"level":"warn","ts":1577101547.908338,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1577101547.9087005,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mtagscloud-environment-bootboot-bfwhd-17[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-xcksn[0m
+{"level":"warn","ts":1577101548.8708897,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1577101548.872596,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mtagscloud-environment-bootboot-bfwhd-17[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mtagscloud-environment-bootboot-bfwhd-17[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-tagscloud-environment-bootboot-558kw[0m
+{"level":"warn","ts":1577101552.9762816,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1577101555.0833762,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/tagscloud/environment-bootboot-staging.git @ v0.0.16 in path /workspace/source"}
+
+Showing logs for build [32mtagscloud-environment-bootboot-bfwhd-17[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:841ba46dfe1bdb03bdb27ad7325fa22ed92cfcab
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mtagscloud-environment-bootboot-bfwhd-17[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mtagscloud-environment-bootboot-bfwhd-17[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 17
+Ignoring templates/.gitignore
+Ignoring templates/wildcardcert-secret.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: strimzi.io http://strimzi.io/charts/
+Successfully added Helm repository strimzi.io.
+
+

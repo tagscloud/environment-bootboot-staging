@@ -7,6 +7,7 @@ elasticsearch:
     enabled: true
   cerebro:
     enabled: true
+  use-ssl: false  
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
